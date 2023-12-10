@@ -11,10 +11,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'netflix-shows': "url('/src/lib/assets/netflix-shows.jpg')",
-			},
-			backgroundOpacity: {
-				'30': '0.3',
+				'gradient-hero': "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/src/lib/assets/netflix-shows.jpg')",
 			},
 		},
 	},
