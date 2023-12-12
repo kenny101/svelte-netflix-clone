@@ -6,6 +6,7 @@
 	import { AppBar, AppShell, storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 	import NetflixLogo from '$lib/assets/netflix-logo.svg';
+	import LanguageSelect from './LanguageSelect.svelte';
 </script>
 
 <AppShell class="top-0 absolute max-h-20 z-10">
@@ -15,6 +16,7 @@
 				<img src={NetflixLogo} alt="Netflix Logo" />
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
+				<LanguageSelect insideNavbar={true}/>
 				<button type="button" class="btn variant-filled-primary font-semibold">Sign In</button>
 			</svelte:fragment>
 		</AppBar>
