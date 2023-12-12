@@ -53,19 +53,19 @@
 	</svelte:fragment>
 	
 	<svelte:fragment slot="image">
-		<div class="h-[480px] w-[480px] relative mt-24">
-			<video autoplay muted loop class="">
+		<div class="md:w-[667px] md:h-[500px] md:ml-20 h-[250px] w-[350px] relative ml-[60px]">
+			<video autoplay muted loop class="md:h-[480px] md:w-[480px] h-[145px] w-[290px]">
 				<track kind="captions" />
 				<source
 					src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
 				/>
 			</video>
-			<img class="absolute w-full h-full object-cover -top-[90px]" src={TVImage} alt="TV" />
+			<img class="absolute w-full h-full object-cover md:-top-[0px] md:right-[95px] -top-[47px] right-[28px]" src={TVImage} alt="TV" />
 		</div>
 	</svelte:fragment>
 </HomeHeroSection>
 
-<HomeHeroSection >
+<HomeHeroSection>
 	<svelte:fragment slot="title">Watch everywhere</svelte:fragment>
 
 	<svelte:fragment slot="description">
