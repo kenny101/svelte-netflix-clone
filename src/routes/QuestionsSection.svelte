@@ -3,7 +3,7 @@
 </script>
 
 <section class="flex flex-col justify-center items-center my-10">
-	<h1 class="h1 font-semibold text-center">Frequently Asked Questions</h1>
+	<h1 class="h1 font-extrabold text-center">Frequently Asked Questions</h1>
 
 	<div class="p-5 md:px-40 md:py-10 w-full space-y-3">
 		<Accordion class=" bg-surface-400 rounded-md">

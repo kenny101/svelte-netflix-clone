@@ -12,6 +12,7 @@ export default {
 		extend: {
 			backgroundImage: {
 				'gradient-hero': "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/src/lib/assets/netflix-shows.jpg')",
+				'cropped-tv': "url('/src/lib/assets/tv.png')" 
 			},
 		},
 	},

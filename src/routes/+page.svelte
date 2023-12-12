@@ -8,7 +8,6 @@
 	import HomeHeroSection from './HomeHeroSection.svelte';
 	import SignupActionInput from './SignupActionInput.svelte';
 	import QuestionsSection from './QuestionsSection.svelte';
-	// import NetflixDemo from '$lib/assets/netflix-demo-video.m4v';
 </script>
 
 <svelte:head>
@@ -20,7 +19,7 @@
 >
 	<div class="flex flex-col items-center justify-center space-y-8 h-96 p-6 my-40">
 		<div class="flex flex-col text-center space-y-4">
-			<h1 class="h1 font-bold tracking-tight">Unlimited movies, TV shows, and more</h1>
+			<h1 class="h1 font-extrabold tracking-tight">Unlimited movies, TV shows, and more</h1>
 			<h2 class="h3 tracking-tight">Watch anywhere. Cancel anytime.</h2>
 		</div>
 		<SignupActionInput />
@@ -46,19 +45,27 @@
 	</div>
 </div>
 
-<HomeHeroSection>
+<HomeHeroSection reversedRow={true}>
 	<svelte:fragment slot="title">Enjoy on your TV</svelte:fragment>
 
 	<svelte:fragment slot="description">
 		Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
 	</svelte:fragment>
-
+	
 	<svelte:fragment slot="image">
-		<img src={TVImage} alt="TV" />
+		<div class="h-[480px] w-[480px] relative mt-24">
+			<video autoplay muted loop class="">
+				<track kind="captions" />
+				<source
+					src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+				/>
+			</video>
+			<img class="absolute w-full h-full object-cover -top-[90px]" src={TVImage} alt="TV" />
+		</div>
 	</svelte:fragment>
 </HomeHeroSection>
 
-<HomeHeroSection reversedRow={true}>
+<HomeHeroSection >
 	<svelte:fragment slot="title">Watch everywhere</svelte:fragment>
 
 	<svelte:fragment slot="description">
@@ -70,7 +77,7 @@
 	</svelte:fragment>
 </HomeHeroSection>
 
-<HomeHeroSection>
+<HomeHeroSection reversedRow={true}>
 	<svelte:fragment slot="title">Create profiles for kids</svelte:fragment>
 
 	<svelte:fragment slot="description">
@@ -83,7 +90,7 @@
 	</svelte:fragment>
 </HomeHeroSection>
 
-<HomeHeroSection reversedRow={true}>
+<HomeHeroSection>
 	<svelte:fragment slot="title">Download your shows to watch offline</svelte:fragment>
 
 	<svelte:fragment slot="description">Watch on a plane, train, or submarine...</svelte:fragment>
